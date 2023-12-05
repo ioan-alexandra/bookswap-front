@@ -1,33 +1,23 @@
-import http from "./http-common";
+import firebase from "../firebase";
 
-class BooksDataService {
-    getAll() {
-        return http.get("/books");
-    }
+const db = firebase.collection("/tutorials");
 
-    get(id) {
-        return http.get(`/books/${id}`);
-    }
+class TutorialDataService {
+  getAll() {
+    return db;
+  }
 
-    create(data) {
-        return http.post("/books", data);
-    }
+  create(tutorial) {
+    return db.add(tutorial);
+  }
 
-    update(id, data) {
-        return http.put(`/books/${id}`, data);
-    }
+  update(id, value) {
+    return db.doc(id).update(value);
+  }
 
-    delete(id) {
-        return http.delete(`/books/${id}`);
-    }
-
-    deleteAll() {
-        return http.delete(`/books`);
-    }
-
-    findByTitle(title) {
-        return http.get(`/books?title=${title}`);
-    }
+  delete(id) {
+    return db.doc(id).delete();
+  }
 }
 
-export default new BooksDataService();
+export default new TutorialDataService();
