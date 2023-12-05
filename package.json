@@ -1,17 +1,21 @@
 {
-  "name": "react-firestore-crud",
+  "name": "bookswap",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^1.6.2",
     "bootstrap": "^4.5.2",
     "firebase": "^7.19.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "reactstrap": "^9.2.1",
+    "request": "^2.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
