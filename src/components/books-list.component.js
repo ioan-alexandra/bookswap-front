@@ -37,6 +37,8 @@ export default class BookList extends Component {
                 title: data.title,
                 description: data.description,
                 published: data.published,
+                author: data.author,
+                thumbnail: data.thumbnail
             });
         });
 

@@ -1,0 +1,30 @@
+.loader-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #73737370;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    border-right-color: #fff;
+    border-radius: 50%;
+    animation: loader linear 1s infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
